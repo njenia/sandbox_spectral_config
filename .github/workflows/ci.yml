@@ -4,17 +4,30 @@ on:
   push:
     branches: [main]
 
+env:
+  SPECTRAL_DSN: ${{ secrets.SPECTRAL_DSN }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
-          repository: https://github.com/njenia/spectral-central-config
+          path: sandbox_spectral_config
+      - uses: actions/checkout@v3
+        with:
+          repository: njenia/spectral-central-config
           path: spectral-central-config
-
+      - name: where am i
+        run: |
+          ls ./spectral-central-config/my_spectral_config
+      - name: download spectral
+        run: curl -L "https://get.spectralops.io/latest/x/sh?dsn=$SPECTRAL_DSN" | sh
+      - name: run spectral
+        run: |
+          cd sandbox_spectral_config
+          $HOME/.spectral/spectral scan -c ../spectral-central-config/my_spectral_config/spectral.yaml
 
 
 
