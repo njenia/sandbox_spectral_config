@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "S3"
+Resources:
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: public-bucket
+      AccessControl: AuthenticatedRead
+      LifecycleConfiguration:
+        Rules:
+        - Id: GlacierRule
+          Prefix: glacier
+          Status: Disabled
+          ExpirationInDays: 365
+        - Id: GlacierRule2
+          Prefix: glacier
+          Status: Disabled
+          ExpirationInDays: 365
+        - Id: GlacierRule2
+          Prefix: glacier
+          # Status: Enabled
+          ExpirationInDays: 365

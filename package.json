@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "parse-url": "5.0.2"
+  }
+}
