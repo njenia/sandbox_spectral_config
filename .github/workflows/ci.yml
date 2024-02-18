@@ -16,7 +16,7 @@ jobs:
         uses: spectralops/spectral-github-action@v3
         with:
           spectral-dsn: ${{ env.SPECTRAL_DSN }}
-          spectral-args: scan --engines iac,oss  --sarif results.sarif
+          spectral-args: scan --engines iac,oss  --sarif
       - name: Checkout code
         uses: actions/checkout@v2
         
@@ -24,4 +24,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: spectral-results
-          path: results.sarif
+          path: output.sarif
