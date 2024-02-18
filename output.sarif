@@ -1,0 +1,913 @@
+{
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Spectral Scan",
+          "rules": [
+            {
+              "id": "CLDFRM280",
+              "name": "Ensure S3 Bucket has no read for unauthenticated users",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": ""
+            },
+            {
+              "id": "CLDFRM292",
+              "name": "S3 bucket should have server access logging enabled",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://guides.spectralops.io/docs/d9_aws_log_12"
+            },
+            {
+              "id": "CLDFRM293",
+              "name": "Ensure S3 Bucket has bucket policy",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": ""
+            },
+            {
+              "id": "CLDFRM295",
+              "name": "Ensure all S3 buckets employ encryption-at-rest",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://guides.spectralops.io/docs/d9_cft_cry_01"
+            },
+            {
+              "id": "CLDFRM301",
+              "name": "Ensure that S3 Buckets are encrypted with CMK",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://guides.spectralops.io/docs/d9_aws_cry_03"
+            },
+            {
+              "id": "CLDFRM302",
+              "name": "Ensure S3 Bucket write access has SSL enabled",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": ""
+            },
+            {
+              "id": "CLDFRM304",
+              "name": "S3 bucket should have versioning enabled",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://guides.spectralops.io/docs/d9_aws_net_19"
+            },
+            {
+              "id": "CLDFRM307",
+              "name": "Ensure that Static website hosting is disabled on your S3 bucket",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://guides.spectralops.io/docs/d9_aws_net_20"
+            },
+            {
+              "id": "CLDFRM430",
+              "name": "Ensure all S3 buckets employ encryption-at-rest",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://guides.spectralops.io/docs/d9_cft_cry_01"
+            },
+            {
+              "id": "CLDFRM509",
+              "name": "Ensure that S3 bucket has versioning enabled",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://guides.spectralops.io/docs/d9_cft_ope_04"
+            },
+            {
+              "id": "CLDFRM510",
+              "name": "Ensure that S3 server access logging is enabled",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://guides.spectralops.io/docs/d9_cft_log_04"
+            },
+            {
+              "id": "CLDFRM518",
+              "name": "Ensure that the S3 bucket has lifecycle configuration enabled",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://guides.spectralops.io/docs/d9_cft_ope_07"
+            },
+            {
+              "id": "CLDFRM519",
+              "name": "Ensure that the S3 bucket has object lock enabled",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://guides.spectralops.io/docs/d9_cft_ope_08"
+            },
+            {
+              "id": "DOCKR003",
+              "name": "Ensure delete installations lists after installation by 'apt'",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://guides.spectralops.io/docs/dockr003"
+            },
+            {
+              "id": "DOCKR004",
+              "name": "Ensure Pin version in 'apt-get' install",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://guides.spectralops.io/docs/dockr004"
+            },
+            {
+              "id": "DOCKR006",
+              "name": "Ensure no manual input in 'apt install'",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://guides.spectralops.io/docs/dockr006"
+            },
+            {
+              "id": "DOCKR008",
+              "name": "Ensure disabling recommended package in apt-get (--no-install-recommends)",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://guides.spectralops.io/docs/dockr008"
+            },
+            {
+              "id": "DOCKR019",
+              "name": "Ensure 'HEALTHCHECK' is set",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://guides.spectralops.io/docs/dockr019"
+            },
+            {
+              "id": "DOCKR026",
+              "name": "Ensure use 'USER' before 'CMD' or 'ENTRYPOINT' your application",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://guides.spectralops.io/docs/dockr026"
+            },
+            {
+              "id": "DOCKR034",
+              "name": "Ensure 'ENTRYPOINT' and 'CMD' arguments using a valid JSON values",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://guides.spectralops.io/docs/dockr034"
+            },
+            {
+              "id": "CVE-2022-0624",
+              "name": "parse-path",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://github.com/advisories/GHSA-3j8f-xvm3-ffx4"
+            },
+            {
+              "id": "CVE-2022-0722",
+              "name": "parse-url",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://github.com/advisories/GHSA-4p35-cfcx-8653"
+            },
+            {
+              "id": "CVE-2022-2216",
+              "name": "parse-url",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://github.com/advisories/GHSA-7f3x-x4pr-wqhj"
+            },
+            {
+              "id": "CVE-2022-2217",
+              "name": "parse-url",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://github.com/advisories/GHSA-q6wq-5p59-983w"
+            },
+            {
+              "id": "CVE-2022-2218",
+              "name": "parse-url",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://github.com/advisories/GHSA-jpp7-7chh-cf67"
+            },
+            {
+              "id": "CVE-2022-2900",
+              "name": "parse-url",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://github.com/advisories/GHSA-j9fq-vwqv-2fm2"
+            },
+            {
+              "id": "CVE-2022-3224",
+              "name": "parse-url",
+              "fullDescription": {
+                "text": ""
+              },
+              "help": {
+                "text": ""
+              },
+              "helpUri": "https://github.com/advisories/GHSA-pqw5-jmp5-px4v"
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "CLDFRM280",
+          "message": {
+            "text": "Ensure S3 Bucket has no read for unauthenticated users"
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cld.yaml"
+                },
+                "region": {
+                  "charOffset": 8,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CLDFRM292",
+          "message": {
+            "text": "S3 bucket should have server access logging enabled"
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cld.yaml"
+                },
+                "region": {
+                  "charOffset": 6,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CLDFRM293",
+          "message": {
+            "text": "Ensure S3 Bucket has bucket policy"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cld.yaml"
+                },
+                "region": {
+                  "charOffset": 7,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CLDFRM295",
+          "message": {
+            "text": "Ensure all S3 buckets employ encryption-at-rest"
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cld.yaml"
+                },
+                "region": {
+                  "charOffset": 6,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CLDFRM301",
+          "message": {
+            "text": "Ensure that S3 Buckets are encrypted with CMK"
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cld.yaml"
+                },
+                "region": {
+                  "charOffset": 6,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CLDFRM302",
+          "message": {
+            "text": "Ensure S3 Bucket write access has SSL enabled"
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cld.yaml"
+                },
+                "region": {
+                  "charOffset": 4,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CLDFRM304",
+          "message": {
+            "text": "S3 bucket should have versioning enabled"
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cld.yaml"
+                },
+                "region": {
+                  "charOffset": 6,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CLDFRM307",
+          "message": {
+            "text": "Ensure that Static website hosting is disabled on your S3 bucket"
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cld.yaml"
+                },
+                "region": {
+                  "charOffset": 6,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CLDFRM430",
+          "message": {
+            "text": "Ensure all S3 buckets employ encryption-at-rest"
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cld.yaml"
+                },
+                "region": {
+                  "charOffset": 6,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CLDFRM509",
+          "message": {
+            "text": "Ensure that S3 bucket has versioning enabled"
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cld.yaml"
+                },
+                "region": {
+                  "charOffset": 6,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CLDFRM510",
+          "message": {
+            "text": "Ensure that S3 server access logging is enabled"
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cld.yaml"
+                },
+                "region": {
+                  "charOffset": 6,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CLDFRM518",
+          "message": {
+            "text": "Ensure that the S3 bucket has lifecycle configuration enabled"
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cld.yaml"
+                },
+                "region": {
+                  "charOffset": 6,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CLDFRM519",
+          "message": {
+            "text": "Ensure that the S3 bucket has object lock enabled"
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cld.yaml"
+                },
+                "region": {
+                  "charOffset": 6,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "DOCKR003",
+          "message": {
+            "text": "Ensure delete installations lists after installation by 'apt'"
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile.web"
+                },
+                "region": {
+                  "charOffset": 14,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "DOCKR003",
+          "message": {
+            "text": "Ensure delete installations lists after installation by 'apt'"
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile.web"
+                },
+                "region": {
+                  "charOffset": 16,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "DOCKR004",
+          "message": {
+            "text": "Ensure Pin version in 'apt-get' install"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile.web"
+                },
+                "region": {
+                  "charOffset": 14,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "DOCKR004",
+          "message": {
+            "text": "Ensure Pin version in 'apt-get' install"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile.web"
+                },
+                "region": {
+                  "charOffset": 16,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "DOCKR006",
+          "message": {
+            "text": "Ensure no manual input in 'apt install'"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile.web"
+                },
+                "region": {
+                  "charOffset": 16,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "DOCKR008",
+          "message": {
+            "text": "Ensure disabling recommended package in apt-get (--no-install-recommends)"
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile.web"
+                },
+                "region": {
+                  "charOffset": 14,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "DOCKR008",
+          "message": {
+            "text": "Ensure disabling recommended package in apt-get (--no-install-recommends)"
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile.web"
+                },
+                "region": {
+                  "charOffset": 16,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "DOCKR019",
+          "message": {
+            "text": "Ensure 'HEALTHCHECK' is set"
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile.web"
+                },
+                "region": {
+                  "charOffset": 1,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "DOCKR026",
+          "message": {
+            "text": "Ensure use 'USER' before 'CMD' or 'ENTRYPOINT' your application"
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile.web"
+                },
+                "region": {
+                  "charOffset": 36,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "DOCKR034",
+          "message": {
+            "text": "Ensure 'ENTRYPOINT' and 'CMD' arguments using a valid JSON values"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile.web"
+                },
+                "region": {
+                  "charOffset": 36,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-0624",
+          "message": {
+            "text": "parse-path"
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/yarn.lock"
+                },
+                "region": {
+                  "charOffset": 0,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-0722",
+          "message": {
+            "text": "parse-url"
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/yarn.lock"
+                },
+                "region": {
+                  "charOffset": 0,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-2216",
+          "message": {
+            "text": "parse-url"
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/yarn.lock"
+                },
+                "region": {
+                  "charOffset": 0,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-2217",
+          "message": {
+            "text": "parse-url"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/yarn.lock"
+                },
+                "region": {
+                  "charOffset": 0,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-2218",
+          "message": {
+            "text": "parse-url"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/yarn.lock"
+                },
+                "region": {
+                  "charOffset": 0,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-2900",
+          "message": {
+            "text": "parse-url"
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/yarn.lock"
+                },
+                "region": {
+                  "charOffset": 0,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-3224",
+          "message": {
+            "text": "parse-url"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/yarn.lock"
+                },
+                "region": {
+                  "charOffset": 0,
+                  "charLength": 0
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
