@@ -17,9 +17,6 @@ jobs:
         with:
           spectral-dsn: ${{ env.SPECTRAL_DSN }}
           spectral-args: scan --engines iac,oss  --sarif --ok
-      - name: Checkout code
-        uses: actions/checkout@v2
-        
       - name: Upload SARIF file
         uses: actions/upload-artifact@v2
         with:
