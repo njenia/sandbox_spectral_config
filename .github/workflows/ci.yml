@@ -1,33 +1,27 @@
-name: CI
-
+name: Run Spectral and Upload SARIF
 on:
   push:
-    branches: [main]
-
+    branches: [ main ]
+    
 env:
   SPECTRAL_DSN: ${{ secrets.SPECTRAL_DSN }}
 
 jobs:
-  build:
+  run_spectral_and_upload_sarif:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
+      - name: Install and run Spectral CI
+        uses: spectralops/spectral-github-action@v3
         with:
-          path: sandbox_spectral_config
-      - uses: actions/checkout@v3
+          spectral-dsn: ${{ env.SPECTRAL_DSN }}
+          spectral-args: scan --engines iac,oss  --sarif results.sarif
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Upload SARIF file
+        uses: actions/upload-artifact@v2
         with:
-          repository: njenia/spectral-central-config
-          path: spectral-central-config
-      - name: where am i
-        run: |
-          ls ./spectral-central-config/my_spectral_config
-      - name: download spectral
-        run: curl -L "https://get.spectralops.io/latest/x/sh?dsn=$SPECTRAL_DSN" | sh
-      - name: run spectral
-        run: |
-          cd sandbox_spectral_config
-          $HOME/.spectral/spectral scan -c ../spectral-central-config/my_spectral_config/spectral.yaml
-
-
-
+          name: spectral-results
+          path: results.sarif
